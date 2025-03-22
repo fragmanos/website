@@ -1,14 +1,20 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.css';
-import Button from '@material-ui/core/Button'
-import GlobalHeader from './GlobalHeader'
+// import GlobalHeader from './GlobalHeader'
+// import Footer from './Footer'
+import { Route, Switch } from "react-router-dom"
+import music from "./Music"
 
 function App() {
   return (
-    <div className="App">
-      <GlobalHeader />
-    </div >
+    <Switch>
+      <Route exact path="/music" component={music} />
+      <Route path="/:id" component={music} />
+    </Switch>
+    // <div className="App">
+    //   <GlobalHeader />
+    //   <Footer />
+    // </div >
   );
 }
 
